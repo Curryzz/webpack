@@ -3,12 +3,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /index\.js/,
+                test: /index\.css/,
                 use:[
                     {
                         loader: "./loaders/test-loader.js",
                         options: {
-                           changeVar:'未知数'
+
                         }
                     }
                 ]

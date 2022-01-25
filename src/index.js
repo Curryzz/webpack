@@ -1,1 +1,1 @@
-未知数 a = 10
+require('./assets/index.css')
