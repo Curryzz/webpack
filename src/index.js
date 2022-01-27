@@ -1,1 +1,2 @@
-require('./assets/index.css')
+console.log('1')
+module.exports = "滚"

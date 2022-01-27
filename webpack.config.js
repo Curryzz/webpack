@@ -1,18 +1,11 @@
+var path = require('path')
 module.exports = {
     mode:"development",
-    module: {
-        rules: [
-            {
-                test: /index\.css/,
-                use:[
-                    {
-                        loader: "./loaders/test-loader.js",
-                        options: {
-
-                        }
-                    }
-                ]
-            }
-        ]
+    entry: {
+        index:'./index.js'
+    },
+    context: path.resolve(__dirname,'src'),
+    output: {
+        library: 'abc',
     }
 }
