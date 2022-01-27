@@ -1,11 +1,20 @@
-var path = require('path')
+var path = require('path');
+const HtmlWebpakPlugin = require('html-webpack-plugin');
 module.exports = {
     mode:"development",
     entry: {
-        index:'./index.js'
+        home:'./src/index.js',
+        a:'./src/a.js'
     },
-    context: path.resolve(__dirname,'src'),
     output: {
-        library: 'abc',
-    }
+        filename: "[name].[chunkhash:5].js"
+    },
+    plugins: [
+        new HtmlWebpakPlugin({
+            template: "./pubilc/index.html",
+            chunks:["home"]
+
+        })
+
+    ]
 }
