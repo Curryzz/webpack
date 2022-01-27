@@ -12,7 +12,14 @@ module.exports = {
     plugins: [
         new HtmlWebpakPlugin({
             template: "./pubilc/index.html",
+            filename: "home.html",
             chunks:["home"]
+
+        }),
+        new HtmlWebpakPlugin({
+            template: "./pubilc/a.html",
+            filename: "a.html",
+            chunks:["a"]
 
         })
 
