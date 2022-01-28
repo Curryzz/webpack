@@ -26,6 +26,12 @@ module.exports = {
     ],
     devServer: {
         port:8888,
-        open:true
+        open:true,
+        proxy:{
+            "/api":{
+                target:"https://open.duyiedu.com",
+                changeOrigin:true //更改请求头中的host和origin
+            }
+        }
     }
 }
