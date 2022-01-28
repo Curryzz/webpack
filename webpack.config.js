@@ -13,7 +13,12 @@ module.exports = {
         rules: [
             {
                 test: /\.(png)|(jpg)|(gif)$/,
-                use: ["file-loader"]
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        name:"imgs/[name].[hash:5].[ext]"
+                    }
+                }]
             }
         ]
     },
