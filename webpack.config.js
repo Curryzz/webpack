@@ -9,6 +9,14 @@ module.exports = {
     output: {
         filename: "[name].[chunkhash:5].js"
     },
+    module: {
+        rules: [
+            {
+                test: /\.(png)|(jpg)|(gif)$/,
+                use: ["file-loader"]
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpakPlugin({
             template: "./pubilc/index.html",
