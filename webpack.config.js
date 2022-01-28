@@ -3,7 +3,7 @@ const HtmlWebpakPlugin = require('html-webpack-plugin');
 module.exports = {
     mode:"development",
     entry: {
-        home:'./src/index.js',
+        index:'./src/index.js',
         a:'./src/a.js'
     },
     output: {
@@ -12,8 +12,8 @@ module.exports = {
     plugins: [
         new HtmlWebpakPlugin({
             template: "./pubilc/index.html",
-            filename: "home.html",
-            chunks:["home"]
+            filename: "index.html",
+            chunks:["index"]
 
         }),
         new HtmlWebpakPlugin({
@@ -23,5 +23,9 @@ module.exports = {
 
         })
 
-    ]
+    ],
+    devServer: {
+        port:8888,
+        open:true
+    }
 }
